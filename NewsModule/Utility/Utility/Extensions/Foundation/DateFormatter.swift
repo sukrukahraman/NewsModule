@@ -40,7 +40,7 @@ public extension Date {
             dateFormatter.dateFormat = "HH:mm"
             return "Yesterday " + dateFormatter.string(from: self)
         } else {
-            dateFormatter.dateFormat = "dd.MM.yyyy        HH:mm"
+            dateFormatter.dateFormat = "dd.MM.yyyy HH:mm"
         }
         
         return dateFormatter.string(from: self)

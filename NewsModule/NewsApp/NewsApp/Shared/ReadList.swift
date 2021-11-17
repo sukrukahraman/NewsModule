@@ -22,7 +22,9 @@ final public class ReadList {
     
     func getList() {
         let defaults = UserDefaults.standard
-        readLists = defaults.object(forKey: Consts.readListKey) as! [String]
+        if let lists = defaults.object(forKey: Consts.readListKey) as? [String] {
+            readLists = lists
+        }
     }
     
     func saveList() {
