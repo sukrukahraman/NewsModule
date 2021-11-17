@@ -40,12 +40,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avk-l9-H0w">
-                        <rect key="frame" x="0.0" y="195" width="67" height="31"/>
+                        <rect key="frame" x="10" y="195" width="46" height="31"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="31" id="YiV-m0-HdM"/>
                         </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
                         <connections>
                             <action selector="addToReadList:" destination="gTV-IL-0wX" eventType="touchUpInside" id="N6W-YR-TCB"/>
                         </connections>
@@ -60,7 +60,7 @@
                 <constraint firstAttribute="bottom" secondItem="avk-l9-H0w" secondAttribute="bottom" constant="5" id="Oe9-Lr-zNa"/>
                 <constraint firstItem="XM4-wR-XIw" firstAttribute="top" secondItem="DqN-j3-riA" secondAttribute="bottom" constant="5" id="T4u-Ge-ABQ"/>
                 <constraint firstItem="DqN-j3-riA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="V2I-fh-c6F"/>
-                <constraint firstItem="avk-l9-H0w" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dTH-nO-eZu"/>
+                <constraint firstItem="avk-l9-H0w" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="dTH-nO-eZu"/>
                 <constraint firstItem="IV4-OH-0Lz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="hQN-E1-mKs"/>
                 <constraint firstAttribute="trailing" secondItem="DqN-j3-riA" secondAttribute="trailing" constant="10" id="kpm-0a-sGb"/>
                 <constraint firstItem="avk-l9-H0w" firstAttribute="top" secondItem="DqN-j3-riA" secondAttribute="bottom" constant="5" id="nM6-fn-zIw"/>

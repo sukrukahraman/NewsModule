@@ -7,7 +7,12 @@
 
 import Foundation
 
-public struct FilterModel {
+public class FilterModel {
     var name: String
     var selected: Bool
+    
+    init(name: String, selected: Bool) {
+        self.name = name
+        self.selected = selected
+    }
 }

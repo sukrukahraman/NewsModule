@@ -18,6 +18,8 @@ final class ListViewModel: ListViewModelProtocol {
     
     var feeds: [ListFeed] = []
     var filterModels: [FilterModel] = []
+    var sourceModels: [SourceModel] = []
+    var filtersFeed: [SourceModel] = []
     
     init() {}
     
@@ -48,12 +50,17 @@ final class ListViewModel: ListViewModelProtocol {
         for filter in filters {
             filterModels.append(FilterModel(name: filter, selected: false))
         }
-        
+        sourceModels = sources
         self.arrangeFeed(filters: filterModels, sources: sources)
     }
     
     private func arrangeFeed(filters: [FilterModel], sources: [SourceModel]) {
         feeds = [.categories(filters: filters), .news(sources: sources)]
+        delegate?.fillList()
+    }
+    
+    func updateFeeds(feed: [SourceModel]) {
+        feeds = [.categories(filters: filterModels), .news(sources: feed)]
         delegate?.fillList()
     }
     

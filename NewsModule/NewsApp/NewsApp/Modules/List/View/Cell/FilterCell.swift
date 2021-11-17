@@ -8,6 +8,10 @@
 import UIKit
 import Utility
 
+protocol FilterCellDelegate: AnyObject {
+    func selectItem(model: FilterModel)
+}
+
 class FilterCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView! {
@@ -24,6 +28,7 @@ class FilterCell: UITableViewCell {
             flowLayout.itemSize = CGSize(width: 110, height: 40)
         }
     }
+    weak var delegate: FilterCellDelegate?
     
     var newsFilters: [FilterModel] = [] {
         didSet {
@@ -53,7 +58,8 @@ extension FilterCell: UICollectionViewDataSource {
 
 extension FilterCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let model = newsFilters[indexPath.item]
+        delegate?.selectItem(model: model)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

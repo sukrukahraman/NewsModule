@@ -21,11 +21,13 @@ class FilterCollectionViewCell: UICollectionViewCell {
     func configure(model: FilterModel) {
         filterLabel.text = model.name.capitalized
         if model.selected {
+            plusImageView.image = UIImage(named: "checkmark")
             filterLabel.textColor = .white
             plusImageView.tintColor = .white
             mainView.layer.borderWidth = 0
             mainView.backgroundColor = .black
         } else {
+            plusImageView.image = UIImage(named: "plus")
             filterLabel.textColor = .black
             plusImageView.tintColor = .black
             mainView.layer.borderWidth = 1

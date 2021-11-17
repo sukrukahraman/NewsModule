@@ -48,6 +48,7 @@ extension ListViewController: UITableViewDataSource {
         switch viewModel.feeds[indexPath.section] {
         case .categories(let filters):
             let cell = tableView.dequeueReusableCell(FilterCell.self)
+            cell.delegate = self
             cell.configure(filters: filters)
             return cell
         case .news(let sources):
@@ -93,5 +94,23 @@ extension ListViewController: ListViewModelDelegate {
     func showDetail(source: SourceModel) {
         let movieDetailViewController = DetailBuilder.make(source: source)
         show(movieDetailViewController, sender: nil)
+    }
+}
+
+extension ListViewController: FilterCellDelegate {
+    func selectItem(model: FilterModel) {
+        viewModel.filtersFeed.removeAll()
+        for filterModel in viewModel.filterModels {
+            if filterModel.name == model.name {
+                filterModel.selected = !filterModel.selected
+            }
+            if filterModel.selected {
+                let filtered = viewModel.sourceModels.filter { $0.category == filterModel.name}
+                viewModel.filtersFeed.append(contentsOf: filtered)
+            }
+        }
+                
+        viewModel.updateFeeds(feed: viewModel.filtersFeed.count > 0 ? viewModel.filtersFeed : viewModel.sourceModels)
+        tableView.reloadData()
     }
 }
