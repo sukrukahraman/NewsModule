@@ -6,7 +6,6 @@
 //
 
 import Alamofire
-import Utility
 
 public final class NetworkRequest {
     public static let shared = NetworkRequest()
