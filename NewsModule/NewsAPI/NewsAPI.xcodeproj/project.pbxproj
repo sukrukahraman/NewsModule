@@ -20,7 +20,6 @@
 		ACA182A327430140001B1331 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ACA182A227430140001B1331 /* Alamofire */; };
 		ACA182A5274301D7001B1331 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA182A4274301D7001B1331 /* NetworkRequest.swift */; };
 		ACA182A72743037B001B1331 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA182A62743037B001B1331 /* NetworkError.swift */; };
-		ACA182AA27430458001B1331 /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = ACA182A927430458001B1331 /* SVProgressHUD */; };
 		ACA182AE27431470001B1331 /* SourceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA182AD27431470001B1331 /* SourceRequest.swift */; };
 		ACA182B0274314CF001B1331 /* SourceRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA182AF274314CF001B1331 /* SourceRequestModel.swift */; };
 		ACA182B227431636001B1331 /* SourceResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA182B127431636001B1331 /* SourceResponseModel.swift */; };
@@ -72,7 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACA182AA27430458001B1331 /* SVProgressHUD in Frameworks */,
 				ACA182A327430140001B1331 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +233,6 @@
 			name = NewsAPI;
 			packageProductDependencies = (
 				ACA182A227430140001B1331 /* Alamofire */,
-				ACA182A927430458001B1331 /* SVProgressHUD */,
 			);
 			productName = NewsAPI;
 			productReference = AC865F3E2742F441003B6B75 /* NewsAPI.framework */;
@@ -288,7 +285,6 @@
 			mainGroup = AC865F342742F441003B6B75;
 			packageReferences = (
 				ACA182A127430140001B1331 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				ACA182A827430458001B1331 /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
 			);
 			productRefGroup = AC865F3F2742F441003B6B75 /* Products */;
 			projectDirPath = "";
@@ -613,14 +609,6 @@
 				version = 4.9.1;
 			};
 		};
-		ACA182A827430458001B1331 /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/epitonium/SVProgressHUD.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -628,11 +616,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ACA182A127430140001B1331 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		ACA182A927430458001B1331 /* SVProgressHUD */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ACA182A827430458001B1331 /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
-			productName = SVProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

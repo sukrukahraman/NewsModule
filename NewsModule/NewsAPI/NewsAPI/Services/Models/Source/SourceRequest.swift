@@ -13,6 +13,5 @@ public class SourceRequest: BaseRequest {
         super.init()
         path = "/v2/sources"
         methodType = .get
-        showLoading = true
     }
 }

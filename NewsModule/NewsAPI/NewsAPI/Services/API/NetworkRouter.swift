@@ -15,9 +15,7 @@ public class NetworkRouter: URLRequestConvertible, NetworkProtocol {
     var path: String = ""
     
     public var methodType: HTTPMethod = .get
-    
-    public var showLoading: Bool = true
-    
+        
     // MARK: - URLRequestConvertible
     public func asURLRequest() throws -> URLRequest {
         var urlComponent = URLComponents(string: APIConfiguration.shared.baseUrl)!

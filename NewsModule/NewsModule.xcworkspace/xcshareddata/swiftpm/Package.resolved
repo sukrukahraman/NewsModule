@@ -18,15 +18,6 @@
           "revision": "a72df4849408da7e5d3c1b586797b7c601c41d1b",
           "version": "5.12.1"
         }
-      },
-      {
-        "package": "SVProgressHUD",
-        "repositoryURL": "https://github.com/epitonium/SVProgressHUD.git",
-        "state": {
-          "branch": null,
-          "revision": "3580cb55f351d83f861f52362aa38305f663f88d",
-          "version": "1.0.0"
-        }
       }
     ]
   },

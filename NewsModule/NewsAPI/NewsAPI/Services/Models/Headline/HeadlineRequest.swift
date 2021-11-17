@@ -13,6 +13,5 @@ public class HeadlineRequest: BaseRequest {
         super.init()
         path = "/v2/top-headlines"
         methodType = .get
-        showLoading = true
     }
 }
