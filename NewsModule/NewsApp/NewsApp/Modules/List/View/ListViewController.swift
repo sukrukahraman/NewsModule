@@ -24,7 +24,7 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
-        viewModel.updateTitle(title: "Kaynaklar")
+        viewModel.updateTitle(title: "sources".localized)
         viewModel.load()
     }
     
@@ -70,6 +70,15 @@ extension ListViewController: UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch viewModel.feeds[indexPath.section] {
+        case .categories(_):
+            break
+        case .news(let sources):
+            viewModel.selectNews(source: sources[indexPath.row])
+        }
+    }
+    
 }
 
 extension ListViewController: ListViewModelDelegate {
@@ -81,7 +90,8 @@ extension ListViewController: ListViewModelDelegate {
         tableView.reloadData()
     }
     
-    func showDetail() {
-        
+    func showDetail(source: SourceModel) {
+        let movieDetailViewController = DetailBuilder.make(source: source)
+        show(movieDetailViewController, sender: nil)
     }
 }

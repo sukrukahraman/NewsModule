@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  NewsApp
+
+  Created by Sukru Kahraman on 17.11.2021.
+  
+*/
+"sources" = "Kaynaklar";
+"add_to_read_list" = "Okuma listeme ekle";
+"remove_from_read_list" = "Okuma listemden çıkar";

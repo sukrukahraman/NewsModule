@@ -57,9 +57,8 @@ final class ListViewModel: ListViewModelProtocol {
         delegate?.fillList()
     }
     
-    func selectNews(index: Int) {
-        
+    func selectNews(source: SourceModel) {
+        delegate?.showDetail(source: source)
     }
-    
-    
+
 }

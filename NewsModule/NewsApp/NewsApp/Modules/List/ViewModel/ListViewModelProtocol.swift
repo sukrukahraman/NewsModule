@@ -11,11 +11,11 @@ import NewsAPI
 protocol ListViewModelProtocol {
     var delegate: ListViewModelDelegate? { get set }
     func load()
-    func selectNews(index: Int)
+    func selectNews(source: SourceModel)
 }
 
 protocol ListViewModelDelegate {
     func fillList()
-    func showDetail()
+    func showDetail(source: SourceModel)
     func update(title: String)
 }

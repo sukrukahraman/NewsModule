@@ -55,4 +55,10 @@ extension FilterCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let filter = newsFilters[indexPath.item]
+        let width = filter.name.getLabelWidth(font: .systemFont(ofSize: 14)) + 45.0
+        return CGSize(width: width, height: 40)
+    }
 }
