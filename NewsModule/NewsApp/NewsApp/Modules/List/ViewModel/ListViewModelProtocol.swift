@@ -17,4 +17,5 @@ protocol ListViewModelProtocol {
 protocol ListViewModelDelegate {
     func fillList()
     func showDetail()
+    func update(title: String)
 }

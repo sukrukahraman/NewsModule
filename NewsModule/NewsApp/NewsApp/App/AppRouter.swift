@@ -18,7 +18,6 @@ final class AppRouter {
     func start() {
         let viewController = ListBuilder.make()
         let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.navigationBar.tintColor = .blue
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }

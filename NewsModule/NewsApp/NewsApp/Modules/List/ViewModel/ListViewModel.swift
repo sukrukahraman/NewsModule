@@ -21,6 +21,10 @@ final class ListViewModel: ListViewModelProtocol {
     
     init() {}
     
+    func updateTitle(title: String) {
+        delegate?.update(title: title)
+    }
+    
     func load() {
         let request = SourceRequest()
         let requestModel = SourceRequestModel()

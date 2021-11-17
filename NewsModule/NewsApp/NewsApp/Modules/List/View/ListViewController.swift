@@ -24,8 +24,8 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
+        viewModel.updateTitle(title: "Kaynaklar")
         viewModel.load()
-        // Do any additional setup after loading the view.
     }
     
 }
@@ -73,6 +73,10 @@ extension ListViewController: UITableViewDelegate {
 }
 
 extension ListViewController: ListViewModelDelegate {
+    func update(title: String) {
+        navigationItem.title = title
+    }
+    
     func fillList() {
         tableView.reloadData()
     }
